@@ -20,3 +20,15 @@ def Clean(fasta):
 def clean_id(id_list):
     id_list = id_list.lstrip("<")
     return id_list
+
+
+
+
+def clean_sequence(Sequence_list):
+    Valid= ("A", "T", "C", "G")
+    for i in Sequence_list.upper():
+        if i not in Valid:
+            Sequence_list = Sequence_list.replace(i , "")
+    return Sequence_list
+
+
