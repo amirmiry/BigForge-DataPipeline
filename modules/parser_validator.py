@@ -15,3 +15,8 @@ def Clean(fasta):
     Sequence_clean = clean_sequence(Sequence_list)
     Dict = {"id": ID_clean , "sequence": Sequence_clean}
     return Dict
+
+
+def clean_id(id_list):
+    id_list = id_list.lstrip("<")
+    return id_list
